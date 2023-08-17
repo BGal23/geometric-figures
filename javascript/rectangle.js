@@ -14,10 +14,7 @@ const ratio = document.getElementById("ratio")
 const lengthAlert = document.querySelector(".length-alert");
 const widthAlert = document.querySelector(".width-alert");
 
-const buttonResult = document.querySelector("button");
-
-const buttonPlus = document.getElementById("button-plus");
-const buttonMinus = document.getElementById("button-minus")
+const buttonResult = document.querySelector(".calc-button");
 
 const decimalPlace = document.getElementById("decimal-place")
 
