@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+header {
+    background-color: lightblue;
+    min-height: 60px;
+    border-bottom: 2px solid black;
+    & div {
+        display: flex;
+        align-items: center;
+        
+    }
+}
+footer {
+    min-height: 80px;
+    background-color: lightblue;
+    border-top: 2px solid black;
+    & div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.length-alert,
+.width-alert {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    background-color: lightblue;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.container {
+    //border: 2px solid red;
+    max-width: calc(100vw - 4rem);
+    margin: 0 auto 0;
+}
