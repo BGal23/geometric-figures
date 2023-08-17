@@ -60,13 +60,12 @@ buttonResult.addEventListener("click", () => {
                 length = length * 100;
                 break;
             case "km":
-                length = length * 1000;
+                length = length * 100000;
                 break;
         };
-                switch (widthSelect) {
+            switch (widthSelect) {
             case "mm":
                 width = width * 0.1;
-                break;
             case "cm":
                 width;
                 break;
@@ -74,7 +73,7 @@ buttonResult.addEventListener("click", () => {
                 width = width * 100;
                 break;
             case "km":
-                width = width * 1000;
+                width = width * 100000;
                 break;
         };
         switch (resultSelect) {
@@ -91,14 +90,14 @@ buttonResult.addEventListener("click", () => {
                 width = width * 0.01;
                 break;
             case "km":
-                length = length * 0.001;
-                width = width * 0.001;
+                length = length * 0.00001;
+                width = width * 0.00001;
                 break;
         };
 
         let decimal = decimalPlace.value
 
-        area.textContent =`${(length * width).toFixed(decimal)} ${resultSelect}`;
+        area.textContent =`${(length * width).toFixed(decimal)} ${resultSelect}2`;
         circuit.textContent = `${(2 * length + 2 * width).toFixed(decimal)} ${resultSelect}`;
         diagonal.textContent = `${(Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2))).toFixed(decimal)} ${resultSelect}`
         ratio.textContent = `${length / length} do ${(width / length).toFixed(decimal)}`
