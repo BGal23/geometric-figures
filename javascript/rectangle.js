@@ -96,10 +96,12 @@ buttonResult.addEventListener("click", () => {
                 break;
         };
 
-        area.textContent =`${(length * width).toFixed(decimalPlace.value)} ${resultSelect}`;
-        circuit.textContent = `${(2 * length + 2 * width).toFixed(decimalPlace.value)} ${resultSelect}`;
-        diagonal.textContent = `${(Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2))).toFixed(decimalPlace.value)} ${resultSelect}`
-        ratio.textContent = `${length / length} do ${(width / length).toFixed(decimalPlace.value)}`
+        let decimal = decimalPlace.value
+
+        area.textContent =`${(length * width).toFixed(decimal)} ${resultSelect}`;
+        circuit.textContent = `${(2 * length + 2 * width).toFixed(decimal)} ${resultSelect}`;
+        diagonal.textContent = `${(Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2))).toFixed(decimal)} ${resultSelect}`
+        ratio.textContent = `${length / length} do ${(width / length).toFixed(decimal)}`
     };
     rectangle()
 });
