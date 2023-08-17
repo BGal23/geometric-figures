@@ -5,6 +5,7 @@ let lengthSelect;
 let widthSelect;
 let resultSelect;
 
+
 const circuit = document.getElementById("circuit");
 const area = document.getElementById("area");
 const diagonal = document.getElementById("diagonal");
@@ -15,6 +16,12 @@ const widthAlert = document.querySelector(".width-alert");
 
 const buttonResult = document.querySelector("button");
 
+const buttonPlus = document.getElementById("button-plus");
+const buttonMinus = document.getElementById("button-minus")
+
+const decimalPlace = document.getElementById("decimal-place")
+
+
 buttonResult.addEventListener("click", () => {
     function rectangle(length, width) {
     length = document.getElementById("length").value;
@@ -23,20 +30,20 @@ buttonResult.addEventListener("click", () => {
     widthSelect = document.getElementById("width-select").value;
     resultSelect = document.getElementById("result-select").value;
         
-        if (length.length === 0 || length == 0) {
+        if (length.length === 0) {
             lengthAlert.textContent = " Wpisz długość!";
         }
-        else if (Number.isNaN(Number(length))) {
-            lengthAlert.textContent = " Długość musi być liczbą!";
+        else if (Number.isNaN(Number(length)) || length < 0) {
+            lengthAlert.textContent = " Długość musi być liczbą większą od 0!";
         }
         else {
             lengthAlert.textContent = "";
         }
-        if (width.length === 0 || width == 0) {
+        if (width.length === 0) {
             widthAlert.textContent = " Wpisz szerokość!";
         }
-        else if (Number.isNaN(Number(width))) {
-            widthAlert.textContent = " Szerokość musi być liczbą!";
+        else if (Number.isNaN(Number(width)) || width < 0) {
+            widthAlert.textContent = " Szerokość musi być liczbą większą od 0!";
         }
         else {
             widthAlert.textContent = "";
@@ -88,12 +95,14 @@ buttonResult.addEventListener("click", () => {
                 width = width * 0.001;
                 break;
         };
-        area.textContent =`${length * width} ${resultSelect}`;
-        circuit.textContent = `${2 * length + 2 * width} ${resultSelect}`;
-        diagonal.textContent = `${Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2))} ${resultSelect}`
-        ratio.textContent = `${length / length} do ${width / length}`
-        
 
+        area.textContent =`${(length * width).toFixed(decimalPlace.value)} ${resultSelect}`;
+        circuit.textContent = `${(2 * length + 2 * width).toFixed(decimalPlace.value)} ${resultSelect}`;
+        diagonal.textContent = `${(Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2))).toFixed(decimalPlace.value)} ${resultSelect}`
+        ratio.textContent = `${length / length} do ${(width / length).toFixed(decimalPlace.value)}`
     };
     rectangle()
 });
+
+
+
