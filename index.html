@@ -14,13 +14,32 @@
 <main>
     <div class="container">
         <h3>Poniżej wpisz wymiary prostokąta</h3>
-        <p>Długość <input id="length"></input><span class="length-alert"></span></p>
-        <p>Szerokość <input id="width"></input><span class="width-alert"></span></p></br>
+        <p>Długość <input id="length"></input></span><span class="length-alert"></p>
+        <p>Wybierz jedostkę długości <select>
+            <option>mm</option>
+            <option>cm</option>
+            <option selected>m</option>
+            <option>km</option>
+        </select></p>
+        <p>Szerokość <input id="width"></input><span class="width-alert"></span></p>
+        <p>Wybierz jedostkę szerokości <select>
+            <option>mm</option>
+            <option>cm</option>
+            <option selected>m</option>
+            <option>km</option>
+        </select></p>
         <button>Oblicz</button></br>
         <h3>Dane twojego prostokąta to:</h3>
         <p>Pole: <span id = "area"></span></p>
         <p>Obwód: <span id = "circuit"></span></p>
         <p>Przekątna: <span id = "diagonal"></span></p>
+        <p>Wybierz docelową jedostkę <select>
+            <option>mm</option>
+            <option>cm</option>
+            <option selected>m</option>
+            <option>km</option>
+        </select></p>
+        <p>Wpisz ilość miejsc po przecinku <input></p>
     </div>
 </main>
 <footer>
