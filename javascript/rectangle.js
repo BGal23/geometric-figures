@@ -15,7 +15,7 @@ buttonResult.addEventListener("click", () => {
     length = document.getElementById("length").value;
     width = document.getElementById("width").value;
         
-        if (length.length === 0 || length === 0) {
+        if (length.length === 0 || length == 0) {
             lengthAlert.textContent = " Wpisz długość!";
         }
         else if (Number.isNaN(Number(length))) {
@@ -24,7 +24,7 @@ buttonResult.addEventListener("click", () => {
         else {
             lengthAlert.textContent = "";
         }
-        if (width.length === 0 || width === 0) {
+        if (width.length === 0 || width == 0) {
             widthAlert.textContent = " Wpisz szerokość!";
         }
         else if (Number.isNaN(Number(width))) {
