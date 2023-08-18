@@ -26,4 +26,5 @@ function includeHTML() {
     }
   };
 
-  includeHTML();
+const btnRectangle = document.querySelector(".buttons")
+
