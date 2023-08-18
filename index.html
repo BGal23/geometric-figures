@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obliczanie Pól</title>
     <link rel="stylesheet" href="./css/style.min.css" />
+    <script scr="./javascript/include.js"></script>
 </head>
+<body>
 <header>
     <div class="container">
         <h2>Obliczanie pól figur geometrycznych</h2>
@@ -13,6 +15,9 @@
 </header>
 <main>
     <div class="container">
+        <section>
+            <h3>Wybierz figure której pole chcesz policzyć</h3>
+        </section>
         <section>
             <div class="buttons-box">
                 <button type="button" class="buttons">
@@ -30,36 +35,7 @@
             </div>
         </section>
         <section>
-            <h3>Poniżej wpisz wymiary prostokąta</h3>
-            <p>Długość <input id="length"></input></span><span class="length-alert"></p>
-            <p>Wybierz jedostkę długości <select id="length-select">
-                <option>mm</option>
-                <option selected>cm</option>
-                <option>m</option>
-                <option>km</option>
-            </select></p>
-            <p>Szerokość <input id="width"></input><span class="width-alert"></span></p>
-            <p>Wybierz jedostkę szerokości <select id="width-select">
-                <option>mm</option>
-                <option selected>cm</option>
-                <option>m</option>
-                <option>km</option>
-            </select></p>
-            <button type="button" class="calc-button">Oblicz</button></br>
-            <h3>Dane twojego prostokąta to:</h3>
-            <p>Pole: <span id = "area"></span></p>
-            <p>Obwód: <span id = "circuit"></span></p>
-            <p>Przekątna: <span id = "diagonal"></span></p>
-            <p>Stosunek długości do szerokości: <span id="ratio"></span></p>
-            <p>Wybierz docelową jedostkę <select id="result-select">
-                <option>mm</option>
-                <option selected>cm</option>
-                <option>m</option>
-                <option>km</option>
-            </select></p>
-            <p>Wpisz ilość miejsc po przecinku 
-                <input type="number" id="decimal-place" min="0" max="50" step="1" value="2"/>
-            </p>
+            <div w3-include-html="./rectangle.html"></div>
         </section>
     </div>
 </main>
@@ -69,6 +45,6 @@
         <p>bartek.gal23@gmail.com</p>
     </div>
 </footer>
-    <script src="./javascript/rectangle.js"></script>
+<script>includeHTML();</script>
 </body>
 </html>
