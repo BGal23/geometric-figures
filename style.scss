@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    margin-top: -20px;
+    margin-top: -21px;
 }
 header {
     background-color: lightblue;
@@ -39,39 +39,8 @@ button {
     cursor: pointer;
     }
 }
-.buttons-box {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    .buttons{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90px;
-        height: 90px;
-        margin: 5px;
-        gap: 10px;
-        & .rectangle {
-            width: 60px;
-            height: 30px;
-            background-color: black;
-        }
-        & .circle {
-            width: 40px;
-            height: 40px;
-            background-color: black;
-            border-radius: 23px;
-        }
-        & .triangle {
-            border: 30px solid transparent;
-            border-top: 0;
-            border-bottom: 40px solid black;
-        }
-    }
-}
+
 .container {
-    //border: 2px solid red;
     max-width: calc(100vw - 4rem);
     margin: 0 auto 0;
 }
